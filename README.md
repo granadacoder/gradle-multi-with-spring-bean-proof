@@ -21,7 +21,7 @@ gradle command line commands
 
     ./gradlew clean build
 
-    ./gradlew printClasspath
+    ./gradlew myCustomPrintClasspathTask
 
     ./gradlew run
 
