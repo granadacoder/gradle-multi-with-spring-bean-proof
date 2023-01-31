@@ -1,4 +1,22 @@
 
+//START "TRY ONE" (there may be other "TRY ONE" breadcrumbs in other files) //
+
+configurations {
+    myCoolConfigurationName
+}
+
+task tryToPackageStuffForOtherSubprojectsTask(type: Jar) {
+    archiveClassifier
+    from sourceSets.main.resources
+}
+
+artifacts {
+    myCoolConfigurationName tryToPackageStuffForOtherSubprojectsTask
+}
+
+//END "TRY ONE" (there may be other "TRY ONE" breadcrumbs in other files) //
+
+
 dependencies {
 
     implementation project(':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-domain')
