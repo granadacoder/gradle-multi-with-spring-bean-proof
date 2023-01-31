@@ -1,0 +1,11 @@
+
+dependencies {
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+
+    testImplementation group: 'junit', name: 'junit', version: junitVersion
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoVersion
+}
+
+
+
