@@ -1,0 +1,12 @@
+
+dependencies {
+
+    implementation project(':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-domain')
+    implementation project(':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-interfaces')
+    implementation project(':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-concrete')
+
+
+}
+
+
+

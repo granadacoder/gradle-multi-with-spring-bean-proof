@@ -1,0 +1,56 @@
+plugins {
+    id "application"
+}
+
+apply plugin : "java"
+
+ext {
+    javaMainClass = "demo.SpringBootApplicationContextXmlConsoleApplication"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+
+task myCustomPrintClasspathTask  {
+    doLast {
+        configurations.runtimeClasspath.each { println 'helloThere->' + it }
+    }
+}
+
+
+dependencies {
+
+    //the below line, if left not-commented-out, will produce a warning : "Execution optimizations have been disabled for task"
+    //implementation project(path: ':source:java:myapproot:myapp-shared-resxex', configuration: 'myCoolConfigurationName')
+
+
+    implementation(group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion) {
+        exclude module: "logback-classic"
+    }
+
+    implementation(group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: springBootVersion) {
+        exclude module: "logback-classic"
+    }
+
+    implementation project(":source:java:myapproot:myapp-shared-resxex")
+    implementation project(':source:java:myapproot:myapp-business-logic')
+
+    implementation project(':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-domain')
+    implementation project(':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-interfaces')
+    implementation project(':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-concrete')
+
+
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: commonsLangVersion
+    implementation group: 'javax.inject', name: 'javax.inject', version: "${javaxInjectVersion}"
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: slf4jSimpleVersion
+
+    testImplementation group: 'junit', name: 'junit', version: junitVersion
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoVersion
+
+}
+
+

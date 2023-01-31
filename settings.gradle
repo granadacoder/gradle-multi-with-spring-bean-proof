@@ -1,0 +1,13 @@
+rootProject.name = 'com.mycompany.myteam.myapp-rootProjectName'
+
+include ':source:java:myapproot:myapp-toplayer-console-composition-root-one'
+include ':source:java:myapproot:myapp-toplayer-console-di-xml-one'
+
+include ':source:java:myapproot:myapp-shared-resxex'
+include ':source:java:myapproot:myapp-business-logic'
+
+include ':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-domain'
+include ':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-interfaces'
+include ':source:java:myapproot:clientproxies:myclientproxy-root:myclientproxy-concrete'
+
+
