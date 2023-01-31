@@ -22,8 +22,10 @@ task myCustomPrintClasspathTask  {
 
 dependencies {
 
+    //START "TRY ONE" (there may be other "TRY ONE" breadcrumbs in other files) //
     //the below line, if left not-commented-out, will produce a warning : "Execution optimizations have been disabled for task"
-    //implementation project(path: ':source:java:myapproot:myapp-shared-resxex', configuration: 'myCoolConfigurationName')
+    implementation project(path: ':source:java:myapproot:myapp-shared-resxex', configuration: 'myCoolConfigurationName')
+    //END "TRY ONE" (there may be other "TRY ONE" breadcrumbs in other files) //
 
 
     implementation(group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion) {
