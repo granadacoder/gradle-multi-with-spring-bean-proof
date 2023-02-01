@@ -31,13 +31,10 @@ gradle command line commands
 output of "gradlew run"
 
 
-    Caused by: java.io.FileNotFoundException: ./source/java/myapproot/myapp-toplayer-console-di-xml-one/build/resources/main/clientproxy.one.di.xml (No such file or directory)
-    at java.base/java.io.FileInputStream.open0(Native Method)
-    at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-    at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
-    at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
-    at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
-    at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
-    at org.springframework.core.io.UrlResource.getInputStream(UrlResource.java:187)
-    at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:333)
-    ... 32 more
+    [main] INFO demo.SpringBootApplicationContextXmlConsoleApplication - Started SpringBootApplicationContextXmlConsoleApplication in 1.724 seconds (JVM running for 2.054)
+    [main] INFO demo.SpringBootApplicationContextXmlConsoleApplication - EXECUTING : command line runner
+    [main] INFO demo.SpringBootApplicationContextXmlConsoleApplication - START : runPatientDemo
+    [main] INFO demo.SpringBootApplicationContextXmlConsoleApplication - getPatientKey='ExamplePatientKeyXmlTopLayerP123'
+    [main] INFO demo.SpringBootApplicationContextXmlConsoleApplication - END : runPatientDemo
+    [main] INFO demo.SpringBootApplicationContextXmlConsoleApplication - END : runPatientDemo
+    [main] INFO demo.SpringBootApplicationContextXmlConsoleApplication - APPLICATION FINISHED

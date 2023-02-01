@@ -8,9 +8,11 @@
 
     <!-- below are "imports" to OTHER (spring-bean) di.xml files -->
 
-    <import resource="clientproxy.one.di.xml"/>
+    <!-- note the "classpath:" prefix below. (because this di.xml file comes from a different gradle module/subproject.  See "4.7.2.2 The classpath*: prefix" at https://docs.spring.io/spring-framework/docs/3.0.0.M4/reference/html/ch04s07.html  -->
+    <import resource="classpath:clientproxy.one.di.xml"/>
 
     <import resource="orchestrators.one.di.xml"/>
+
 
 
 </beans>
